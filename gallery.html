@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Image Gallery</h1>
+        <p>Explore our stunning collection of high-quality images</p>
+    </div>
+</header>
+
+<section class="gallery-container">
+    <div class="gallery">
+        <!-- Gallery Images -->
+        <div class="gallery-item" onclick="openModal(0)">
+            <img src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item" onclick="openModal(1)">
+            <img src="https://t4.ftcdn.net/jpg/07/41/71/93/360_F_741719394_C9BP3YbiXSJ7WspSDLtKdYxZKKWlf0Jz.jpg" alt="Image 2">
+        </div>
+        
+        <div class="gallery-item" onclick="openModal(2)">
+            <img src="https://media.istockphoto.com/id/610041376/photo/beautiful-sunrise-over-the-sea.jpg?s=612x612&w=0&k=20&c=R3Tcc6HKc1ixPrBc7qXvXFCicm8jLMMlT99MfmchLNA=" alt="Image 3">
+        </div>
+        <div class="gallery-item" onclick="openModal(3)">
+            <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=" alt="Image 4">
+        </div>
+            
+        <div class="gallery-item" onclick="openModal(4)">
+            <img src="https://i.pinimg.com/originals/bc/b5/d9/bcb5d9df181b9bc07bcc0cc2d659d3fe.jpg" alt="Image 5">
+        </div>
+        <div class="gallery-item" onclick="openModal(5)">
+            <img src="https://upstdc.co.in/website/pic/portfolio/580x285-1@2x.jpg" alt="Image 6">
+        </div>
+        <div class="gallery-item" onclick="openModal(6)">
+            <img src="https://www.allartdirect.co.uk/cdn/shop/products/img_proxy_071d24fa-be00-4360-850e-c17f7e365c78.jpg?v=1734627242" alt="Image 7">
+        </div>
+        <div class="gallery-item" onclick="openModal(7)">
+            <img src="https://rivieramaison.com/media/catalog/product/cache/a998d1fab5b663e391b809e55535fa36/5/6/565920.webp" alt="Image 8">
+        </div>
+        <div class="gallery-item" onclick="openModal(8)">
+            <img src="https://static7.depositphotos.com/1288351/768/i/450/depositphotos_7689364-stock-photo-ringed-planet.jpg" alt="Image 9">
+        </div>
+          <div class="gallery-item" onclick="openModal(9)">
+            <img src="https://static7.depositphotos.com/1288351/768/i/450/depositphotos_7689364-stock-photo-ringed-planet.jpg" alt="Image 10">
+          </div>
+          <div class="gallery-item" onclick="openModal(10)">
+            <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" alt="Image 11">
+          </div>
+          <div class="gallery-item" onclick="openModal(11)">
+            <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" alt="Image 12">
+          </div>
+        
+        </div>
+</section>
+
+<!-- Modal for Image View -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="">
+    </div>
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

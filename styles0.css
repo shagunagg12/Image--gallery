@@ -1,0 +1,207 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Black background */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hero Section (Main Header) */
+.hero {
+    background-color: #111; /* Black background */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    flex-grow: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h1 .highlight {
+    font-weight: bold;
+    font-size: 3.8rem;
+    color: #e46b08; /* Golden color */
+}
+
+.hero h1 .sparkle-text {
+    position: relative;
+    display: inline-block;
+    color: #db2808e7; /* Red sparkling text */
+    animation: sparkle 1.5s linear infinite;
+}
+
+/* Sparkling Effect */
+@keyframes sparkle {
+    0% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347, 0 0 50px #ff6347;
+    }
+    25% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 50px #ff6347, 0 0 60px #ff6347;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 70px #ff6347, 0 0 80px #ff6347;
+    }
+    75% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 100px #ff6347, 0 0 120px #ff6347;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 50px #ff6347, 0 0 60px #ff6347;
+    }
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #ff6347, #021b2e); /* Gradient effect from red to golden */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 2s forwards;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #022430, #ff6347); /* Reverse gradient on hover */
+    transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Golden color */
+    animation: slideInUp 1s ease-out;
+}
+
+.features p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #aaa;
+    animation: slideInUp 1s ease-out 0.5s forwards;
+}
+
+.sub-text {
+    color: #777;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.feature-card {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-out 1s forwards;
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff6347; /* Red color for feature titles */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:hover h3 {
+    color: #ffcc00; /* Golden color on hover */
+}
+
+/* Hover effect on feature titles */
+.hover-effect:hover {
+    color: #ff6347;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Media Queries (Responsive) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}
